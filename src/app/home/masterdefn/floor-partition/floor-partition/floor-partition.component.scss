@@ -1,0 +1,134 @@
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(62, 164, 211);
+    color: white;
+    padding: 9px 20px;
+    font-size: 20px;
+  
+  }
+  
+  .mat-elevation-z8 {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: row; /* Arrange label and select side by side */
+    justify-content: center; /* Center them horizontally */
+    align-items: center; /* Center them vertically */
+    margin-top: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #555;
+    display: inline-block;
+    text-align: right; /* Right-align the label */
+    margin-right: 10px; /* Add some spacing between label and select */
+  }
+  
+  select {
+    width: 40%; /* Change the width to 40% or any other value you prefer */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  select:focus {
+    outline: none; /* Remove the outline when the select box is focused */
+  }
+  
+  
+  /* Style the options in the dropdown */
+  select option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .add-row-button:hover {
+    background-color: #0d4a86;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-row-button {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    float: right;
+    font-size: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add shadow */
+  }
+  
+  .action-btn {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+  
+  .action-btn:hover {
+    background-color: rgb(180, 180, 180);
+  }
+  
+   .mat-elevation-z8 th {
+    background-color: #ffffff; /* Add your desired background color */
+    //color: white; /* Text color for the header cells */
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    background-color: aliceblue;
+  }
+  
+  
+  .main-card{
+    width: 99%;
+    margin-bottom: 10px;
+    margin: 4px;
+    background: rgb(239, 246, 247);
+  }
+  .card-header{
+    margin-bottom: 10px;
+  }
+  .content-card{
+    width: 99%;
+    margin-bottom: 10px;
+    margin: 4px;
+  }
+  
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  

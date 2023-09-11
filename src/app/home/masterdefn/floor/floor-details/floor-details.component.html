@@ -1,0 +1,142 @@
+<div>
+  <mat-card class="main-card">
+    <mat-card-header class="card-header">
+      <mat-card-title>Floor Details</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+
+<mat-card class="content-card">
+  <mat-card-content class="card-header">
+    <div class="form-group" style="gap: 20px;"> 
+      <label for="towerSelect">Select a Tower </label>
+      <select id="towerSelect" name="tower" [(ngModel)]="selectedTowerId" (change)="onTowerSelectionChange()">
+        <option *ngFor="let tower of towerData" [value]="tower.Tower_Id">{{ tower.Tower_Name }}</option>
+      </select>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card>
+
+  <div class="inline-container">
+    <input matInput #filterInput class="inline-text-box" placeholder="Filter" (keyup)="applyFilter(filterInput.value)">
+    <mat-paginator class="mat-pagination" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    <button class="inline-button" (click)="addRow()">Add New</button>
+  </div>
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Column for Floor ID -->
+    <ng-container matColumnDef="floor_id">
+      <th mat-header-cell *matHeaderCellDef>Floor ID</th>
+      <td mat-cell *matCellDef="let row">{{  row['Floor_Id']}}</td>
+    </ng-container>
+
+    <!-- Column for Floor Name -->
+    <ng-container matColumnDef="floor_name">
+      <th mat-header-cell *matHeaderCellDef>Floor Name</th>
+      <td mat-cell *matCellDef="let row">{{ row['Floor_Name'] }}</td>
+    </ng-container>
+
+    <!-- Column for Tower ID -->
+    <ng-container matColumnDef="tower_id">
+      <th mat-header-cell *matHeaderCellDef>Tower ID</th>
+      <td mat-cell *matCellDef="let row">{{ row['Tower_Id'] }}</td>
+    </ng-container>
+
+    <!-- Column for Tower name -->
+    <ng-container matColumnDef="tower_name">
+      <th mat-header-cell *matHeaderCellDef>Tower Name</th>
+      <td mat-cell *matCellDef="let row">{{ row['Tower_Name'] }}</td>
+    </ng-container>
+
+    <!-- Column for Total Floor Area -->
+    <ng-container matColumnDef="total_floor_area">
+      <th mat-header-cell *matHeaderCellDef>Total Floor Area</th>
+      <td mat-cell *matCellDef="let row">{{ row['Total_Floor_Area'] }}</td>
+    </ng-container>
+
+    <!-- Column for Used Space -->
+    <ng-container matColumnDef="used_space">
+      <th mat-header-cell *matHeaderCellDef>Used Space</th>
+      <td mat-cell *matCellDef="let row">{{ row['Used_Space'] }}</td>
+    </ng-container>
+
+    <!-- Column for Unused Space -->
+    <ng-container matColumnDef="unused_space">
+      <th mat-header-cell *matHeaderCellDef>Unused Space</th>
+      <td mat-cell *matCellDef="let row">{{ row['Unused_Space'] }}</td>
+    </ng-container>
+
+    <!-- Column for Common Space -->
+    <ng-container matColumnDef="common_space">
+      <th mat-header-cell *matHeaderCellDef>Common Space</th>
+      <td mat-cell *matCellDef="let row">{{ row['Common_Space'] }}</td>
+    </ng-container>
+
+    <!-- Column for Entered By -->
+    <ng-container matColumnDef="entered_by">
+      <th mat-header-cell *matHeaderCellDef>Entered By</th>
+      <td mat-cell *matCellDef="let row">{{ row['Entered_By'] }}</td>
+    </ng-container>
+
+    <!-- Column for Entered User -->
+    <ng-container matColumnDef="entered_user">
+      <th mat-header-cell *matHeaderCellDef>Entered User</th>
+      <td mat-cell *matCellDef="let row">{{ row['Entered_User'] }}</td>
+    </ng-container>
+
+    <!-- Column for Entered At -->
+    <ng-container matColumnDef="entered_at">
+      <th mat-header-cell *matHeaderCellDef>Entered At</th>
+      <td mat-cell *matCellDef="let row">{{ row['Entered_At'] }}</td>
+    </ng-container>
+
+    <!-- Column for Last Modified At -->
+    <ng-container matColumnDef="last_modified_at">
+      <th mat-header-cell *matHeaderCellDef>Last Modified At</th>
+      <td mat-cell *matCellDef="let row">{{ row['Last_Modified_At'] }}</td>
+    </ng-container>
+
+    <!-- Column for Verified User -->
+    <ng-container matColumnDef="verified_user">
+      <th mat-header-cell *matHeaderCellDef>Verified User</th>
+      <td mat-cell *matCellDef="let row">{{ row['Verified_User'] }}</td>
+    </ng-container>
+
+    <!-- Column for Verified At -->
+    <ng-container matColumnDef="verified_at">
+      <th mat-header-cell *matHeaderCellDef>Verified At</th>
+      <td mat-cell *matCellDef="let row">{{ row['Verified_At'] }}</td>
+    </ng-container>
+
+    <!-- Column for Actions -->
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let row">
+        <!-- Add your action buttons here -->
+        <button mat-icon-button class="action-btn" (click)="editRow(row)">
+          <mat-icon>edit</mat-icon>
+        </button>
+
+        <button mat-icon-button class="action-btn" (click)="deleteRow(row)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Set the table columns -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+
+
+  
+</mat-card>
+<br><br>
+
+
+<app-loading *ngIf="isLoading"></app-loading>

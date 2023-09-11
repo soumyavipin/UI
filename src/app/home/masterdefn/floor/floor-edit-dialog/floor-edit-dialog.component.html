@@ -1,0 +1,39 @@
+<h2>Add/Edit - Floor</h2>
+<form [formGroup]="editForm">
+
+  <mat-form-field><mat-label>Floor Name</mat-label>
+    <input matInput placeholder="Floor Name" formControlName="floor_name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select the Tower</mat-label>
+    <mat-select id="towerSelect" name="tower" formControlName="tower_id" required>
+      <mat-option *ngFor="let tower of towerData" [value]="tower.Tower_Id">{{ tower.Tower_Name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="form-field-container">
+  <mat-form-field class="input-num-field"> <mat-label>Total Floor Area</mat-label>
+    <input matInput placeholder="Total Floor Area" formControlName="total_floor_area" />
+  </mat-form-field>
+
+  <mat-form-field class="input-num-field"><mat-label>Used Space</mat-label>
+    <input matInput placeholder="Used Space" formControlName="used_space" />
+  </mat-form-field>
+
+  <mat-form-field class="input-num-field"><mat-label>Unused Sapce</mat-label>
+    <input matInput placeholder="Unused Sapce" formControlName="unused_space" />
+  </mat-form-field>
+
+  <mat-form-field class="input-num-field"><mat-label>Common Space</mat-label>
+    <input matInput placeholder="Common Space" formControlName="common_space" />
+  </mat-form-field>
+  </div>
+  
+
+
+  <div class="dialog-actions">
+    <button class="cancelbtn large-button " mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button class="savebtn large-button" (click)="onSave()">Save</button>
+  </div>
+</form>

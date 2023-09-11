@@ -1,0 +1,187 @@
+$success-button-color: #ff0000;
+$grid-header-color: rgb(12, 136, 165);
+$button-font-name: "Lucida Console", "Courier New", monospace;
+
+@media (min-width: 801px) {
+  .grid-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $grid-header-color;
+    color: white;
+    padding: 5px 20px;
+    font-size: 20px;
+  }
+
+  .add-new-button {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: #3a9fb7;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    float: right;
+    font-size: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: $button-font-name;
+  }
+
+  .add-new-button:hover {
+    background-color: rgb(25, 65, 95);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+//.....................................................................
+  .mat-table-header {
+    background-color: aliceblue;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .mat-cell {
+    font-size: 8px;
+  }
+
+  .mat-elevation-z8 th {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .mat-elevation-z8 td {
+    font-size: 12px;
+  }
+//....................................................................
+  .dialog-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .large-button {
+    font-size: 17px;
+  }
+
+  .cancelbtn {
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 0.5px solid #ccc;
+    margin-right: 10px;
+    // border-radius: 7%;
+    width: 20%;
+  }
+
+  .cancelbtn:hover {
+    background-color: #c2c1c1;
+  }
+
+  .savebtn {
+    padding: 6px 12px;
+    background-color: rgb(36, 96, 125);
+    border: 0.5px solid #ccc;
+    color: white;
+    // border-radius: 7%;
+    width: 20%;
+  }
+
+  .savebtn:hover {
+    background-color: #206cbe;
+  }
+
+  mat-form-field {
+    width: 660px;
+  }
+
+  .grid-header {
+    background-color: rgb(239, 246, 247);
+    color: black;
+    font-size: 22px;
+  }
+
+  .add-new-buttons {
+    background-color: forestgreen;
+    width: 88px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+  }
+
+  //.................................................................
+  .inline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .inline-text-box {
+    // flex: 1; /* Allow the text box to grow and take available space */
+    font-size: 16px;
+    color: #333;
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-right: 10px;
+
+  }
+
+  .inline-text-box:focus {
+    outline: none;
+  }
+
+  .inline-button {
+    padding: 10px 20px;
+    /* Adjust padding for the button */
+    background-color: rgb(36, 96, 125);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+  }
+
+  .mat-pagination {
+    text-align: center;
+  }
+
+  //.....................................................
+  .main-card {
+    width: 99%;
+    margin-bottom: 10px;
+    margin: 4px;
+    background: rgb(239, 246, 247);
+  }
+
+  .card-header {
+    margin-bottom: 10px;
+  }
+
+  .content-card {
+    width: 99%;
+    margin-bottom: 10px;
+    margin: 4px;
+  }
+
+  //.........................................
+  .action-btn {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+
+  .action-btn:hover {
+    background-color: rgb(180, 180, 180);
+  }
+  //...............................................
+  .mat-elevation-z8 {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  //...............................................
+
+
+  
+}

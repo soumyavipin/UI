@@ -1,0 +1,18 @@
+<h2>Add/Edit - Tower </h2>
+<form [formGroup]="editForm">
+
+  <mat-form-field>
+    <mat-label>Tower Name</mat-label>
+    <input matInput placeholder="Tower Name" formControlName="tower_name" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Number Of Floors</mat-label>
+    <input matInput placeholder="Number Of Floors" formControlName="no_of_floors" (keydown)="onKeyPress($event)" />
+  </mat-form-field>
+
+  
+  <div class="dialog-actions">
+    <button class="cancelbtn large-button " mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button class="savebtn large-button " (click)="onSave()">Save</button>
+  </div>
+</form>
