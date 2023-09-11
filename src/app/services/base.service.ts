@@ -11,7 +11,7 @@ import { EncryptService } from './encrypt.service';
 
 export class BaseService {
 
-  private baseUrl: string = 'https://localhost:44380/api';
+  private baseUrl: string = 'https://localhost:44354/api';
   public isLoggedIn: boolean = false;
   constructor(
     private httpClient: HttpClient,
